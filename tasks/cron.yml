@@ -1,0 +1,6 @@
+- name: Add ansible-pull cron job
+  cron:
+    name: ansible auto-provision
+    user: ansible_admin
+    minute: "*/10"
+    job: ansible-pull --vault-password-file ~/.vault_key -o -U https://github.com/rdvm/ansible.git

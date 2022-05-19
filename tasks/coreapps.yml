@@ -1,0 +1,9 @@
+- name: install core packages
+  package:
+    name: 
+      - htop
+      - tmux
+      - vim
+      - mc
+      - neofetch
+      - curl

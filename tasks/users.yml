@@ -1,0 +1,25 @@
+- name: Add the user 'ace' and change his shell
+  user:
+    name: ace
+    shell: /usr/bin/bash
+
+- name: set up sudo for ace
+  copy:
+    src: files/sudoer1
+    dest: /etc/sudoers.d/ace
+    owner: root
+    group: root
+    mode: 0440
+
+- name: Add the user 'ansible_admin'
+  user:
+    name: ansible_admin
+    system: yes
+
+- name: set up sudo for ansible_admin
+  copy:
+    src: files/sudoer2
+    dest: /etc/sudoers.d/ansible_admin
+    owner: root
+    group: root
+    mode: 0440

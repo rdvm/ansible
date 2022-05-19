@@ -1,0 +1,55 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install core packages
+    package:
+      name: 
+        - htop
+        - tmux
+        - vim
+        - mc
+        - neofetch
+        - curl
+
+  - name: copy dockerenvar file
+    copy:
+      src: files/dockerenvar
+      dest: /etc/environment
+      owner: root
+      group: root
+
+  - name: add ace
+    user:
+      name: ace
+      system: no
+
+  - name: set up sudo for ace
+    copy:
+      src: files/sudoer1
+      dest: /etc/sudoers.d/ace
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible_admin
+    user:
+      name: ansible_admin
+      system: yes
+
+  - name: set up sudo for ansible_admin
+    copy:
+      src: files/sudoer2
+      dest: /etc/sudoers.d/ansible_admin
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: ansible_admin
+      minute: "*/10"
+      job: ansible-pull --vault-password-file ~/.vault_key -o -U https://github.com/rdvm/ansible.git
