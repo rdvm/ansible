@@ -10,3 +10,11 @@
         - htop
         - tmux
         - vim
+
+  - name: copy dockerenvar file
+    copy:
+      src: files/dockerenvar
+      dest: /etc/environment
+      owner: root
+      group: root
+
