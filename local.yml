@@ -12,6 +12,7 @@
         - vim
         - mc
         - neofetch
+        - curl
 
   - name: copy dockerenvar file
     copy:
