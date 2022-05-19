@@ -26,7 +26,7 @@
 
   - name: set up sudo for ace
     copy:
-      src: files/sudoer_ace
+      src: files/sudoer1
       dest: /etc/sudoers.d/ace
       owner: root
       group: root
@@ -39,7 +39,7 @@
 
   - name: set up sudo for ansible_admin
     copy:
-      src: files/sudoer_ansible_admin
+      src: files/sudoer2
       dest: /etc/sudoers.d/ansible_admin
       owner: root
       group: root
