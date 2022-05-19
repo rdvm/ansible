@@ -11,7 +11,7 @@
         - tmux
         - vim
         - mc
-        - cowsay
+        - neofetch
 
   - name: copy dockerenvar file
     copy:
