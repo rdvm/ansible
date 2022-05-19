@@ -11,6 +11,7 @@
         - tmux
         - vim
         - mc
+        - cowsay
 
   - name: copy dockerenvar file
     copy:
