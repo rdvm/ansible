@@ -50,3 +50,11 @@
       user: ansible_admin
       minute: "*/10"
       job: ansible-pull -o -U https://github.com/rdvm/ansible.git
+        
+  - name: copy test file
+    copy:
+      src: files/info.txt
+      dest: /etc/sudoers.d/info.txt
+      owner: root
+      group: root
+      mode: 0440
