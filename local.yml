@@ -18,3 +18,35 @@
       owner: root
       group: root
 
+  - name: add ace
+    user:
+      name: ace
+      system: no
+
+  - name: set up sudo for ace
+    copy:
+      src: files/sudoer_ace
+      dest: /etc/sudoers.d/ace
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible_admin
+    user:
+      name: ansible_admin
+      system: yes
+
+  - name: set up sudo for ansible_admin
+    copy:
+      src: files/sudoer_ansible_admin
+      dest: /etc/sudoers.d/ansible_admin
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: ansible_admin
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/rdvm/ansible.git
