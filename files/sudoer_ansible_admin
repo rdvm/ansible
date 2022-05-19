@@ -1,1 +1,0 @@
-ansible_admin ALL=(ALL) NOPASSWD: ALL
