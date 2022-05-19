@@ -10,6 +10,7 @@
         - htop
         - tmux
         - vim
+        - mc
 
   - name: copy dockerenvar file
     copy:
