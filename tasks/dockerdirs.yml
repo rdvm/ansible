@@ -4,7 +4,7 @@
     state: directory
     owner: ace
     group: ace
-    mode: 777
+    mode: u=rwx,g=rwx,o=rx
 
 - name: Create docker container persistent data directory
   file:
@@ -12,5 +12,5 @@
     state: directory
     owner: ace
     group: ace
-    mode: 777
+    mode: u=rwx,g=rwx,o=rx
 
