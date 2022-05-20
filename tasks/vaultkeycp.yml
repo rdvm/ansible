@@ -1,5 +1,5 @@
 - name: Create docker-compose directory
   copy:
-    src: /home/ace/.vault_key
+    src: /root/.vault_key
     dest: /home/ansible_admin
     remote_src: yes
