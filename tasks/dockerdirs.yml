@@ -2,10 +2,12 @@
   file:
     path: /home/ace/docker
     state: directory
-    mode: u+rw,g-r,o-r
+    owner: ace
+    group: ace
 
 - name: Create docker container persistent data directory
   file:
     path: /home/ace/condata
     state: directory
-    mode: u+rw,g-r,o-r
+    owner: ace
+    group: ace
