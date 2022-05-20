@@ -2,10 +2,10 @@
   file:
     path: /home/ace/docker
     state: directory
-    mode: 644
+    mode: 744
 
 - name: Create docker container persistent data directory
   file:
     path: /home/ace/condata
     state: directory
-    mode: 644
+    mode: 744
