@@ -9,3 +9,4 @@
       - curl
       - boxes
       - figlet
+      - cowsay
