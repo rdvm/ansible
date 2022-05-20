@@ -18,5 +18,6 @@
   tasks:
     - include: tasks/coreapps.yml
     - include: tasks/users.yml
-    - include: tasks/shortdocker.yml
+    - include: tasks/docker.yml
     - include: tasks/cron.yml
+    - include: tasks/dockerdirs.yml

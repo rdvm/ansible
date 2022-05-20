@@ -1,0 +1,11 @@
+- name: Create docker-compose directory
+  file:
+    path: /home/ace/docker
+    state: directory
+    mode: 644
+
+- name: Create docker container persistent data directory
+  file:
+    path: /home/ace/condata
+    state: directory
+    mode: 644
