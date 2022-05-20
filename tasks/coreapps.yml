@@ -10,3 +10,4 @@
       - boxes
       - figlet
       - cowsay
+      - wget

@@ -1,0 +1,2 @@
+- name: Install Netdata
+  ansible.builtin.shell: wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
