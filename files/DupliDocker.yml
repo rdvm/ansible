@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicatibootstrap
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - DOCKER_MODS=linuxserver/mods:universal-docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/ace/tempcon/duplicati:/config
+      - /home/ace/condata:/source
+      - /home/ace/docker:/dockerpose
+    ports:
+      - 8200:8200
+    restart: unless-stopped
