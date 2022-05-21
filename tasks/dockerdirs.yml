@@ -6,14 +6,6 @@
     group: ace
     mode: u=rwx,g=rwx,o=rx
 
-- name: Create tempora docker-compose directory
-  file:
-    path: /home/ace/tempdocker
-    state: directory
-    owner: ace
-    group: ace
-    mode: u=rwx,g=rwx,o=rx
-
 - name: Create docker container persistent data directory
   file:
     path: /home/ace/condata
@@ -22,7 +14,23 @@
     group: ace
     mode: u=rwx,g=rwx,o=rx
 
+- name: Create temporary docker-compose directory
+  file:
+    path: /home/ace/tempdocker
+    state: directory
+    owner: ace
+    group: ace
+    mode: u=rwx,g=rwx,o=rx
+
+- name: Create temporary docker data directory
+  file:
+    path: /home/ace/tempcondata
+    state: directory
+    owner: ace
+    group: ace
+    mode: u=rwx,g=rwx,o=rx
+
 - name: Create Duplicati bootstrap docker-compose
   copy:
     src: files/DupliDocker.yml
-    dest: /home/ace/tempdocker
+    dest: /home/ace/tempdocker/docker-compose.yml
