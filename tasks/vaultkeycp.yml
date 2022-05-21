@@ -1,5 +1,11 @@
-- name: Create docker-compose directory
+- name: Copy local vault_key to ansible_admin profile
   copy:
     src: /root/.vault_key
     dest: /home/ansible_admin
+    remote_src: yes
+
+- name: Copy local vault_key to ace profile
+  copy:
+    src: /root/.vault_key
+    dest: /home/ace
     remote_src: yes
