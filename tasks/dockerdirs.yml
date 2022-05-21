@@ -22,7 +22,7 @@
     group: ace
     mode: u=rwx,g=rwx,o=rx
 
-- name: Create Duplicata bootstrap docker-compose
+- name: Create Duplicati bootstrap docker-compose
   copy:
-    src: /files/DuplicDocker.yml
+    src: /files/DupliDocker.yml
     dest: /home/ace/tempdocker
