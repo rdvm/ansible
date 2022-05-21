@@ -1,0 +1,7 @@
+- name: Copy dockerenvar file
+  copy:
+    src: files/dockerenvar
+    dest: /etc/environment
+    owner: root
+    group: root
+    mode: 0440
