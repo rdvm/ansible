@@ -1,0 +1,5 @@
+- name: Create Docker 'proxy' network
+  docker_network:
+    name: proxy
+    driver_options:
+      com.docker.network.bridge.name: proxy

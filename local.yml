@@ -24,3 +24,4 @@
     - include: tasks/netdata.yml
     - include: tasks/vaultkeycp.yml
     - include: tasks/dockerenvarcp.yml
+    - include: tasks/dockernetwork.yml
