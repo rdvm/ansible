@@ -1,36 +1,36 @@
 - name: Create docker-compose directory
   file:
-    path: /home/ace/docker
+    path: /home/docks/docker
     state: directory
-    owner: ace
-    group: ace
+    owner: docks
+    group: docks
     mode: u=rwx,g=rwx,o=rx
 
 - name: Create docker container persistent data directory
   file:
-    path: /home/ace/condata
+    path: /home/docks/condata
     state: directory
-    owner: ace
-    group: ace
+    owner: docks
+    group: docks
     mode: u=rwx,g=rwx,o=rx
 
 - name: Create temporary docker-compose directory
   file:
-    path: /home/ace/tempdocker
+    path: /home/docks/tempdocker
     state: directory
-    owner: ace
-    group: ace
+    owner: docks
+    group: docks
     mode: u=rwx,g=rwx,o=rx
 
 - name: Create temporary docker data directory
   file:
-    path: /home/ace/tempcondata
+    path: /home/docks/tempcondata
     state: directory
-    owner: ace
-    group: ace
+    owner: docks
+    group: docks
     mode: u=rwx,g=rwx,o=rx
 
 - name: Create Duplicati bootstrap docker-compose
   copy:
     src: files/DupliDocker.yml
-    dest: /home/ace/tempdocker/docker-compose.yml
+    dest: /home/docks/tempdocker/docker-compose.yml

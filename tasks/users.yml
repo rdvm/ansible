@@ -10,6 +10,14 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: Add the user 'docks' and change his shell
+  user:
+    name: ace
+    uid: 1001
+    groups: docker
+    append: yes
+    shell: /usr/bin/bash
 
 - name: Add the user 'ansible_admin'
   user:
