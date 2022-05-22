@@ -13,7 +13,7 @@
     
 - name: Add the user 'docks' and change his shell
   user:
-    name: ace
+    name: docks
     uid: 1001
     groups: docker
     append: yes
