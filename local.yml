@@ -21,7 +21,6 @@
     - include: tasks/docker.yml
     - include: tasks/cron.yml
     - include: tasks/dockerdirs.yml
-    - include: tasks/netdata.yml
     - include: tasks/vaultkeycp.yml
     - include: tasks/dockerenvarcp.yml
     - include: tasks/dockernetwork.yml
